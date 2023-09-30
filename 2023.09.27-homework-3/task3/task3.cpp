@@ -1,39 +1,26 @@
-#include <iostream>
+#include<iostream>
 
 int main()
 {
-    long int x = 0;
-    long int res = 0;
-    long int opposite = 0;
-    std::cin >> x;
+    long int n = 0;
+    long int ans = 0;
+    std::cin >> n;
 
-    for (long int i = 1; i <= x/2 + 1; i++)
-    {   
-        //прервыание цикла, если из x не извлекается квадрат
-        if (opposite == i) break;
-        if (x % i == 0)
+    for (int i = 1; i <= n; i++)
+    {
+        if (i * i >= n)
         {
-            opposite = x / i;
-            res ++;
-            //std::cout << i << " " << opposite << std::endl; 
+            if (i * i == n)
+                ans++;
+            break;
         }
-        //прерывание цикла, когда из x извлекается квадрат
-        if (opposite == i) break;
+        if (n % i == 0)
+        {
+            ans += 2;
+        }
     }
 
-    if (x == 1)
-    {
-        std::cout << 1;
-    }
-     //умножение результата на 2 и вычитание повторяющегося делителя
-    else if (opposite * opposite == x)
-    {
-        std::cout << res * 2 - 1;
-    }
-    //результат если повторяющихся делителей нет (при неизвлечимом корне из x)
-    else
-    {
-        std::cout << res * 2;
-    }
+    std::cout << ans;
+
     return EXIT_SUCCESS;
 }
