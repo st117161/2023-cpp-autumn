@@ -5,83 +5,61 @@ int main()
     int a = 0;
     int b = 0;
     int n = 0;
-    int s1 = 0;
-    int s2 = 0;
-    int i = 0;
+    int rem = 0;
+    int gcd = 0;
+    char a_name = 'A';
+    char b_name = 'B';
 
     std::cin >> a;
     std::cin >> b;
     std::cin >> n;
 
-    int a_nod = a;
-    int b_nod = b;
-    int nod = 0;
+    int a1 = a;
+    int b1 = b;
 
-    while ((a_nod != 0) && (b_nod != 0))
+    if (a > b)
     {
-        if (a_nod > b_nod)
-        {
-            a_nod = a_nod % b_nod;
-        }
-        else
-        {
-            b_nod = b_nod % a_nod;
-        }
+        gcd = a;
+        a = b;
+        b = gcd;
+        a_name = 'B';
+        b_name = 'A';
     }
-    nod = a_nod + b_nod;
-    // std::cout << nod << " " << a << " " << b << " " << std::endl;
 
-    if (((n > a) && (n > b)) || (n % nod != 0))
-    {   
+    if (n == b)
+    {
+        std::cout << ">" << b_name;
+        return 0;
+    }
+
+    while (b1 != 0)
+    {
+        gcd = a1 % b1;
+        a1 = b1;
+        b1 = gcd;
+    }
+    if ((n % a1 != 0) || ((n > a) && (n > b)))
+    {
         std::cout << "Impossible" << std::endl;
     }
-    else if (b > a)
+    else
     {
-        while ((s1 != n) && (s2 != n) && (i < 100000))
+        while (1)
         {
-            i++;
-            s1 += a;
-            std::cout << ">A" << std::endl;
-            s2 += s1;
-            s1 = 0;
-            std::cout << "A>B" << std::endl;
-            if (s2 >= b)
+            rem += a;
+            std::cout << ">" << a_name << std::endl;
+            std::cout << a_name << ">" << b_name << std::endl;
+            if (rem >= b)
             {
-                s1 += s2 - b;
-                s2 = b;
-                if ((s1 == n) || (s2 == n)) 
-                {
-                    break;
-                }
-                s2 = 0;
-                std::cout << "B<" << std::endl;
+                std::cout << b_name << ">" << std::endl;
+                std::cout << a_name << ">" << b_name << std::endl;
+                rem %= b;
             }
-        
-        }
-    }
-    else 
-    {
-        while ((s1 != n) && (s2 != n) && (i < 100000))
-        {   
-            i++;
-            s1 += b;
-            std::cout << ">B" << std::endl;
-            s2 += s1;
-            s1 = 0;
-            std::cout << "B>A" << std::endl;
-            if (s2 >= a)
+            if ((rem == n) || (rem == 0))
             {
-                s1 += s2 - a;
-                s2 = a;
-                if ((s1 == n) || (s2 == n)) 
-                {
-                    break;
-                }
-                s2 = 0;
-                std::cout << "A<" << std::endl;
-            }  
+                break;
+            }
         }
     }
-    // std::cout << i;
     return EXIT_SUCCESS;
 }
