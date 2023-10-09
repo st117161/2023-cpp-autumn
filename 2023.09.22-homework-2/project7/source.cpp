@@ -1,13 +1,13 @@
 #include <iostream>
 
-int main()
+int main(int argc, char *argv[])
 {
     int x = 0;
     std::cin >> x;
-    int x_10 = x / 10;       
-    int x_1 = x - x_10 * 10; 
+    int x_10 = x / 10;
+    int x_1 = x - x_10 * 10;
 
-    switch (x_10) 
+    switch (x_10)
     {
     case (0):
         break;

@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+int main(int argc, char *argv[])
 {
     int sysanswer = 0;
     int answer = 0;
@@ -15,9 +15,9 @@ int main()
     {
         std::cout << "YES";
     }
-    else 
+    else
     {
         std::cout << "NO";
     }
     return EXIT_SUCCESS;
-}   
+}

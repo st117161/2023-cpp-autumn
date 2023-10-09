@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+int main(int argc, char *argv[])
 {
     int k = 0;
     int m = 0;
@@ -14,7 +14,7 @@ int main()
     {
         time = 2 * m;
     }
-    else 
+    else
     {
         time = (2 * n / k) * m;
         if ((n % k != 0) && (n % k != k / 2))
@@ -22,7 +22,7 @@ int main()
             time += m;
         }
     }
-    
+
     std::cout << time;
     return EXIT_SUCCESS;
 }

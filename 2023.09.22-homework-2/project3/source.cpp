@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+int main(int argc, char *argv[])
 {
     int a = 0;
     int b = 0;
@@ -16,18 +16,18 @@ int main()
     {
         std::cout << "INF";
     }
-    else if ((a == 0) || (a*d) == (b*c))
+    else if ((a == 0) || (a * d) == (b * c))
     {
         std::cout << "NO";
     }
     else if (b % a == 0)
     {
-        std::cout << -b/a;
+        std::cout << -b / a;
     }
-    else 
+    else
     {
         std::cout << "NO";
     }
 
     return EXIT_SUCCESS;
-}  
+}

@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+int main(int argc, char *argv[])
 {
     int a = 0;
     int b = 0;
@@ -35,9 +35,9 @@ int main()
         std::cout << b << " " << a << " " << c;
     }
 
-    else 
+    else
     {
-        std::cout <<  a << " " << c << " " << b;
+        std::cout << a << " " << c << " " << b;
     }
     return EXIT_SUCCESS;
 }
