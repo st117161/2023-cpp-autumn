@@ -1,13 +1,13 @@
 #include <iostream>
 
-int main()
+int main(int argc, char *argv[])
 {
     long int k = 0;
     long int res = 0;
     std::cin >> k;
 
     for (long int i = 1; i <= k; i++)
-    {   
+    {
         if (i < 10)
         {
             res++;

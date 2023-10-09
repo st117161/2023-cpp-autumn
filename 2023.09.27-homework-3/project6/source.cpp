@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+int main(int argc, char *argv[])
 {
     long int curr = 1;
     long int next = 1;
@@ -8,7 +8,7 @@ int main()
     long int n = 0;
     long int i = 0;
     std::cin >> n;
-    while(i < n - 2)
+    while (i < n - 2)
     {
         res = curr + next;
         curr = next;

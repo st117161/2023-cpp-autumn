@@ -1,6 +1,6 @@
-#include<iostream>
+#include <iostream>
 
-int main()
+int main(int argc, char *argv[])
 {
     long int n = 0;
     long int ans = 0;
