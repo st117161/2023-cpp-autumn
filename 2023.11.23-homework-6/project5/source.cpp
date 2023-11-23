@@ -8,19 +8,23 @@ void hanoi(int n, int from, int to)
     }
 
     int res = 6 - from - to;
-    if (n % 2 == 0)
-    { // пока не получается осилить
-    }
-    else
-    {
-    }
+    hanoi(n - 1, from, res);
+    printf("%d %d %d\n", n, from, to);
+    hanoi(n - 1, res, to);
 }
 
 int main(int argc, char *argv[])
 {
     int n = 0;
     std::cin >> n;
-    hanoi(n, 1, 3);
+    int from = 1;
+    int to = 0;
+    for (int i = n; i > 0; --i)
+    {
+        to = (i % 2 == 0 ? 3 : 2);
+        hanoi(i, from, to);
+        from = to;
+    }
 
     return EXIT_SUCCESS;
 }
