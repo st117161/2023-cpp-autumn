@@ -141,18 +141,24 @@ int LinkedList::Data(int index)
 
 void LinkedList::swap(int ia, int ib)
 {
-    if (!IndexValid(ia) || !IndexValid(ib))
+    if (!IndexValid(ia) || !IndexValid(ib) || ia == ib)
     {
         return;
     }
     if (ia > ib)
     {
-        std::swap(ia, ib);
+        int tmp = ib;
+        ib = ia;
+        ia = tmp;
     }
-    Node *ibnode = ExtractNode(ib);
-    Node *ianode = ExtractNode(ia);
-    InsertNode(ia, ibnode);
-    InsertNode(ib, ianode);
+    Node *nodeB = ExtractNode(ib);
+    Node *nodeA = ExtractNode(ia);
+    if (nodeA == nullptr || nodeB == nullptr)
+    {
+        return;
+    }
+    InsertNode(ia, nodeB);
+    InsertNode(ib, nodeA);
 }
 
 void LinkedList::sort()
@@ -171,7 +177,11 @@ void LinkedList::sort()
 
 bool LinkedList::IndexValid(int index)
 {
-    return (0 <= index);
+    if (index < 0 || index > Length())
+    {
+        return false;
+    }
+    return true;
 }
 
 void LinkedList::dispose()
