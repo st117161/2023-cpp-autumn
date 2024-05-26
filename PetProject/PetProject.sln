@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PetProject", "PetProject.vcxproj", "{A9DCE3AB-7692-4ACC-9A5A-A9E7F560F302}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9DCE3AB-7692-4ACC-9A5A-A9E7F560F302}.Debug|x64.ActiveCfg = Debug|x64
+		{A9DCE3AB-7692-4ACC-9A5A-A9E7F560F302}.Debug|x64.Build.0 = Debug|x64
+		{A9DCE3AB-7692-4ACC-9A5A-A9E7F560F302}.Debug|x86.ActiveCfg = Debug|Win32
+		{A9DCE3AB-7692-4ACC-9A5A-A9E7F560F302}.Debug|x86.Build.0 = Debug|Win32
+		{A9DCE3AB-7692-4ACC-9A5A-A9E7F560F302}.Release|x64.ActiveCfg = Release|x64
+		{A9DCE3AB-7692-4ACC-9A5A-A9E7F560F302}.Release|x64.Build.0 = Release|x64
+		{A9DCE3AB-7692-4ACC-9A5A-A9E7F560F302}.Release|x86.ActiveCfg = Release|Win32
+		{A9DCE3AB-7692-4ACC-9A5A-A9E7F560F302}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B086212C-356C-43F1-BF00-507789FCE951}
+	EndGlobalSection
+EndGlobal
